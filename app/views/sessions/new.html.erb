@@ -1,0 +1,13 @@
+<%= render 'shared/header_common_signed_out.html.erb' %>
+<br/>
+<br/>
+<%= form_tag sign_in_path, class: 'sign_in' do %>
+<%= label_tag :email, "Email Address" %>
+<%= email_field_tag :email %>
+<%= label_tag :password %>
+<%= password_field_tag :password %>
+
+<fieldset.action>
+<input type='submit' value='Sign In' class='btn'>
+<% end %>
+<h2>This is sessions/new.html.erb</h2>

@@ -1,0 +1,184 @@
+%body
+  :css
+    .my-span {color:white; font-family:helvetica; font-weight:bold; font-size:large; border:0px solid gray; width:200px; display:inline-block;}
+  :css
+    .span-b {color:grey; font-family:arial; font-size:small; border:1px green; width:300px; display:inline-block;}  :css
+    .span-c {color:white; font-family:helvetica; text-decoration:none; font-size:70%; display:inline-block; }
+  :css
+    .button-a {text-decoration:none; cursor:pointer}  :css
+    .indent-a {margin-left:10px}
+  #container{:style => "width:800px"}
+    #header{:style => "background-color:#B9090B; height:45px; border-radius:5px; margin-top:10px;"}
+      %span.my-span{:style => "margin-top:10px;"}
+        \&nbsp;
+        %a VideoFLiX
+      %span.span-c
+        %a{:href => "", :style => "color:inherit; text-decoration:none"} VIDEOS
+        \&nbsp;&nbsp;
+        %a{:href => "", :style => "color:inherit; text-decoration:none"} MY QUEUE
+        \&nbsp;&nbsp;
+        %a{:href => "", :style => "color:inherit; text-decoration:none"} PEOPLE
+      \&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      %a.button-a{:action => "demo_form_action.asp", :method => "get", :name => "input"}
+        %input{:name => "movie-title", :style => "width:150px; border:0px; border-radius:15px;", :type => "text"}
+          %input.button-a{:href => "", :type => "submit", :value => "Search"}
+      \&nbsp;&nbsp;
+      <span class="span-c"; style="">Hello, User
+    #content{:style => "background-color:#EEEEEE;height:300px;width:570px;float:left;"}
+      %p
+        %form{:action => "/select_avatar", :method => "post"}
+          %img{:src => "http://s3.amazonaws.com/codecademy-blog/assets/f3a16fb6.jpg", :style => "display: block; margin: auto"}
+    #menu{:style => "background-color:grey;height:300px;width:230px;float:right;"}
+      .indent-a
+        %br/
+        %b Movie Title
+        %br/
+        %br/
+        %text This is the movie description
+        %br/
+        %br/
+        %a.button-a{:href => ""}
+          %input.button-a{:type => "submit", :value => "Watch Now"}/
+        %a.button-a{:href => ""}
+          %input.button-a{:type => "submit", :value => "Your Queue"}/
+    %span.span-b
+    %span.span-b
+      %div
+        %form{:action => ""}
+          Rate this movie:
+          %br/
+          %select.button-a{:name => "rating"}
+            %option{:value => "5 stars"} 5 stars
+            %option{:value => "4 stars"} 4 stars
+            %option{:value => "3 stars"} 3 stars
+            %option{:value => "2 stars"} 2 stars
+            %option{:value => "1 star"} 1 star
+        %br/
+        Write a review:
+        %br/
+        %textarea{:cols => "30", :rows => "5"}
+          :preserve
+            
+        %br/
+        %a.button-a{:href => ""}
+          %input.button-a{:type => "submit", :value => "Submit"}/
+    %br/
+    %br/
+    #footer{:style => "background-color:#FFA500;clear:both;text-align:center;"}
+      Copyright © VideoFlix
+  %form{:action => "/select_avatar", :method => "post"}
+    %img.avatar-option{:src => "/images/m_r.jpg", :style => "cursor: pointer;"}/
+    %img.avatar-option{:src => "/images/w_r.jpg", :style => "cursor: pointer;"}/
+    %img.avatar-option{:src => "/images/m_b.jpg", :style => "cursor: pointer;"}/
+    %img.avatar-option{:src => "/images/m_m.jpg", :style => "cursor: pointer;"}/
+    %img.avatar-option{:src => "/images/w_m.jpg", :style => "cursor: pointer;"}/
+    %img.avatar-option{:src => "/images/w_b.jpg", :style => "cursor: pointer;"}/
+
+
+%h1 This is index.html.haml in /titles
+
+%body
+  %img{:src => "http://s3.amazonaws.com/codecademy-blog/assets/f3a16fb6.jpg"}/
+
+%br/
+
+%body
+  %img{:src => "images/photo1.jpg"}/
+
+
+
+
+
+
+/
+<!DOCTYPE html>
+<html>
+<body>
+<style type="text/css"> .my-span {color:white; font-family:helvetica; font-weight:bold; font-size:large; border:0px solid gray; width:200px; display:inline-block;}
+</style>
+<style type="text/css"> .span-b {color:grey; font-family:arial; font-size:small; border:1px green; width:300px; display:inline-block;}</style>
+<style type="text/css" > .span-c {color:white; font-family:helvetica; text-decoration:none; font-size:70%; display:inline-block; }
+</style>
+<style type="text/css"> .button-a {text-decoration:none; cursor:pointer}</style>
+<style type="text/css"> .indent-a {margin-left:10px}
+</style>
+<div id="container" style="width:800px">
+<div id="header" style="background-color:#B9090B; height:45px; border-radius:5px; margin-top:10px;">
+<span class="my-span" style="margin-top:10px;">&nbsp;
+<a>VideoFLiX</a>
+</span>
+<span class="span-c">
+<a href='' style="color:inherit; text-decoration:none">VIDEOS</a>
+&nbsp;&nbsp;
+<a href='' style="color:inherit; text-decoration:none">MY QUEUE</a>
+&nbsp;&nbsp;
+<a href='' style="color:inherit; text-decoration:none">PEOPLE</a>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a name="input" action="demo_form_action.asp" method="get" class='button-a'>
+<input type="text" name="movie-title" style="width:150px; border:0px; border-radius:15px;">
+<input type="submit" value="Search" class='button-a' href='' >
+</a>
+&nbsp;&nbsp;
+<span class="span-c"; style="">Hello, User
+</span>
+</div>
+<div id="content" style="background-color:#EEEEEE;height:300px;width:570px;float:left;">
+<p>
+<form action='/select_avatar' method='post'>
+<img src='http://s3.amazonaws.com/codecademy-blog/assets/f3a16fb6.jpg'  style="display: block; margin: auto">
+</form>
+</p>
+</div>
+<div id="menu" style="background-color:grey;height:300px;width:230px;float:right;">
+<div  class="indent-a"><br/><b>Movie Title</b><br/><br/><text>This is the movie description</text>
+<br/>
+<br/>
+<a href='' class='button-a'><input type="submit" value="Watch Now" class='button-a'></a>
+<a href='' class='button-a'><input type="submit" value="Your Queue" class='button-a'></a></div>
+</div>
+
+<span class="span-b"></span><span class="span-b">
+<div>
+<form action="">
+Rate this movie:
+<br/>
+<select name="rating" class='button-a'>
+<option value="5 stars">5 stars</option>
+<option value="4 stars">4 stars</option>
+<option value="3 stars">3 stars</option>
+<option value="2 stars">2 stars</option>
+<option value="1 star">1 star</option>
+</select>
+</form>
+<br/>
+Write a review:
+<br/>
+<textarea rows="5" cols="30">
+</textarea>
+<br/>
+<a href='' class='button-a'><input type='submit' value='Submit' class='button-a'></a>
+
+</div>
+</span>
+<br/>
+<br/>
+
+<div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
+Copyright © VideoFlix</div>
+
+
+
+</div>
+ 
+<form action='/select_avatar' method='post'>
+    <img class="avatar-option"  src='/images/m_r.jpg' style="cursor: pointer;" />
+    <img class="avatar-option"  src='/images/w_r.jpg' style="cursor: pointer;" />
+    <img class="avatar-option"  src='/images/m_b.jpg' style="cursor: pointer;" />
+    <img class="avatar-option"  src='/images/m_m.jpg' style="cursor: pointer;" />
+    <img class="avatar-option"  src='/images/w_m.jpg' style="cursor: pointer;" />
+    <img class="avatar-option"  src='/images/w_b.jpg' style="cursor: pointer;" />
+</form>
+
+</body>
+</html>

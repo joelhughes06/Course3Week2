@@ -1,0 +1,29 @@
+<head>
+<link rel='stylesheet' href='app/assets/stylesheets/application.css'>
+</head>
+
+<body>
+<table style="width:100%">
+<%= render 'shared/header_common' %>
+	<div id="content" class="white-bkg">
+		<p>	
+			<% @categories.each do |category| %>
+				<a class='font-a'><%= category.genre %></a>
+					<hr width="98%" color='grey'>
+					<br/>
+						<% category.recent_videos.each do |poster|%>
+							<form method='post'>
+								<a href='/titles/<%= poster.id %>'><img src='/<%= poster.small_image %>' style='height:200px' class="indent-a"></a>
+						<% end %>
+					<br/>
+					<br/>
+			<% end %>
+			<br/>
+		</p>
+	</div>
+	<div id="footer" class="black-banner">
+		Copyright © VideoFliX
+	</div>
+</table>
+<h2>This is views/titles/index.html</h2>
+</body>

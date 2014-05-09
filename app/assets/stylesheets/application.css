@@ -1,0 +1,26 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+	.my-span {color:white; font-family:helvetica; font-weight:bold; font-size:large; border:0px solid gray; width:25%; display:inline-block;}
+	.span-b {color:gray; font-family:arial; font-size:small; border:1px green; width:37.5%; display:inline-block;}
+	.span-c {color:white; font-family:helvetica; text-decoration:none; font-size:70%; display:inline-block; }
+	.span-a {margin-left: 50px}
+	.button-a {text-decoration:none; cursor:pointer}
+	.indent-a {margin-left:10px}
+	.plain-white-text {color:white;}
+	.black-banner {color:white;background-color:black;clear:both;text-align:center;height:100%;}
+	.white-bkg {background-color:#EEEEEE;height:100%;width:100%;float:left;}
+	.font-a {color:black; margin-left:2%; font-family:arial; font-size:100%; font-weight:bold; text-decoration:none;}

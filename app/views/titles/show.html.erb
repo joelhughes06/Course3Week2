@@ -1,0 +1,75 @@
+<head>
+<link rel='stylesheet' href='app/assets/stylesheets/application.css'>
+</head>
+
+<body>
+<table style="width:100%">
+	<div id="container" style="width:100%">
+		<%= render 'shared/header_common' %>
+		<div id="content" style="background-color:#EEEEEE;height:100%;width:70%;float:left;">
+		<p>
+			<form method='post'>
+				<img src='/<%= @title.image %>'  style="display: block; margin: auto; height:375px">
+			</form>
+		</p>
+	</div>
+
+	<div>
+		<br/>
+		<b class="indent-a"><%= @title.title %></b>
+		<br/>
+		<br/>
+		<text class="indent-a"><%= @title.description %></text>
+		<br/>
+		<br/>
+		<a class="indent-a"><a href='' class='button-a'><input type="submit" value="Watch Now" class='button-a'></a>
+		<a href='' class='button-a'><input type="submit" value="Your Queue" class='button-a'></a></a>
+	</div>
+
+	<div id="menu" style="background-color:grey;height:100%;width:100%;float:right;">
+
+		<span class="span-b"></span>
+		<span class="span-b">
+			<div>
+				<form action="">
+				<br/>
+				<a class="plain-white-text">
+					Rate this movie:
+				</a>
+				<br/>
+					<select name="rating" class='button-a'>
+						<option value="5 stars">5 stars</option>
+						<option value="4 stars">4 stars</option>
+						<option value="3 stars">3 stars</option>
+						<option value="2 stars">2 stars</option>
+						<option value="1 star">1 star</option>
+					</select>
+				</form>
+				<br/>
+				<a class="plain-white-text">
+				<br/>
+					Write a review:
+				</a>
+				<br/>
+				<textarea rows="5" cols="30">
+				</textarea>
+				<br/>
+				<a href='' class='button-a'><input type='submit' value='Submit' class='button-a'></a>
+
+			</div>
+		</span>
+			<br/>
+			<br/>
+
+		<div id="footer" class="black-banner">
+			Copyright © VideoFliX
+		</div>
+	</div>
+			 
+
+</table>
+</body>
+
+
+
+<h2>This is show.html.erb in /titles</h2>
