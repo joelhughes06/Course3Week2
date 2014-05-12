@@ -1,0 +1,8 @@
+%article.video_category
+ -@results.each do |video|
+ 	.video.span2
+ 	 =link_to video do
+ 	 	%img(src="#{video.small_cover_url}")
+
+=form_tag search_videos_path, class: "span5 for-search" do
+ %input.search-query(name="search_term" type="text" placeholder="search for videos here")

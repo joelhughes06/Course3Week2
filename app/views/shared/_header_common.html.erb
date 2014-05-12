@@ -12,21 +12,27 @@
 				<a href='' style="color:inherit; text-decoration:none">PEOPLE</a>
 			</span>
 			<span class='span-a'></span>
-
+<!--
 <%= form_tag(search_titles_path, method: "get") do %>
 
   <%= label_tag() %>
   <%= text_field_tag(:q) %>
   <%= submit_tag("Search") %>
 <% end %>
+-->
 
+<%= form_tag search_titles_path, class: "" do %>
+  <input class="search-query" name="search_term" type="text" placeholder="search for videos here"></input>
+<a href='' class='button-a'><input type="submit" value="Search" class='button-a' href='' ></a>
+<% end %>
 
+<!--
 			<a name="input" action="demo_form_action.asp" method="get" class='button-a'>
 			<input type="text" name="search_term" class="search-query" placeholder="search for videos here" style="width:20%; border:0px; border-radius:15px; padding-left:10px">
 			</a>
 			<a href='' class='button-a'><input type="submit" value="Search" class='button-a' href='' ></a>
 
-
+-->
 			<span class='span-a'></span>
 			<span class="span-c"; style="">Hello, <%= @user ? @user.username : "Guest" %>
 			</span>

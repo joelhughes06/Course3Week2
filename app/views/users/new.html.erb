@@ -8,6 +8,7 @@
 	<div id="content" class="white-bkg">
 		<p>	
 
+<!--
 <%= form_tag @login, builder: MyFormBuilder do %>
 	<div class='login_block'>
 	<%= label_tag :username %>
@@ -23,7 +24,7 @@
 	</div>
 	<%= submit_tag 'Sign Up' %>
 <% end %>
-
+-->
 <%= bootstrap_form_for @user, html: { class: "form-horizontal" } do |f| %>
 
 <%= f.email_field :email, label: "Email Address" %>

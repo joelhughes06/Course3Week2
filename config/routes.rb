@@ -39,6 +39,12 @@ Rails.application.routes.draw do
     get 'sign_in', to: "titles#index"
   end
 
+  resources :titles, only: [:show] do
+    collection do
+      post :search, to: "titles#search"
+    end 
+  end
+
   resources :users, except: [:destroy] do
       get :sign_in, to: "users#sign_in"
       post :sign_in, to: "titles#index"
@@ -47,6 +53,12 @@ Rails.application.routes.draw do
   get "register", to: "users#new"
 
   get "sign_in", to: "sessions#new"
+
+  get "home", to: "titles#index"
+
+  resources :sessions, only: [:create]
+
+  get 'sign_out', to: 'sessions#destroy'
 
   #get "sign_in", to: "users#sign_in"
 
