@@ -39,6 +39,12 @@ before_action #:set_title, only: [:show]
 
 	def search
 		@results = Title.search_by_title(params[:search_term])
+		if @results
+			render 'titles/search'
+		else
+			flash[:error] = 'Sorry, no titles match your search.'
+			redirect_to '/'
+		end
 	end
 
 end

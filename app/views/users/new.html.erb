@@ -25,6 +25,8 @@
 	<%= submit_tag 'Sign Up' %>
 <% end %>
 -->
+
+<!--
 <%= bootstrap_form_for @user, html: { class: "form-horizontal" } do |f| %>
 
 <%= f.email_field :email, label: "Email Address" %>
@@ -42,5 +44,28 @@
 </body>
 <h1>
 This is /users/new.html.erb
-
 </h1>
+-->
+
+<section class="register container">
+  <div class="row">
+    <div class="span10 offset1">
+      <%= bootstrap_form_for @user, html: {class: "form-horizontal"} do |f| %>
+        <header>
+          <h1>Register</h1>
+        </header>
+        <fieldset>
+          <%= f.email_field :email, label: "Email address" %>
+          <%= f.password_field :password, label: "Password" %>
+          <%= f.text_field :full_name, label: "Full name" %>
+        </fieldset>
+        <fieldset class="actions control_group">
+          <div class="controls">
+            <input type="Submit" value="Sign up" class="button"></input>
+          </div>
+        </fieldset>
+      <% end %>
+    </div>
+  </div>
+</section>
+<h2>This is users/new.html.erb</h2>

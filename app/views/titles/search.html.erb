@@ -1,8 +1,10 @@
+<%= render 'shared/header_common' %>
+
 <article class="title_category">
   <% @results.each do |video| %>
     <div class="span2">
       <%= link_to video do %>
-        <img/>
+        <img src="/<%= video.small_image %>" style='height:200px' class="indent-a" />
       <% end %>
     </div>
   <% end %>

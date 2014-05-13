@@ -10,4 +10,31 @@
 <fieldset.action>
 <input type='submit' value='Sign In' class='btn'>
 <% end %>
+
+
+<section class="sign_in container">
+  <div class="row">
+    <div class="span10 offset1">
+      <%= form_tag sessions_path, class: 'Sign In' do %>
+        <header>
+          <h1>Sign In</h1>
+        </header>
+        <fieldset>
+          <%= label_tag :email, "Email address" %>
+          <%= email_field_tag :email %>
+          <%= label_tag :password %>
+          <%= password_field_tag :password %>
+        </fieldset>
+        <fieldset class="action">
+          <input type="submit" value="Sign in" class="button"></input>
+        </fieldset>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+
+
+
+
 <h2>This is sessions/new.html.erb</h2>

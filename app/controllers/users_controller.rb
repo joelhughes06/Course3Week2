@@ -9,10 +9,11 @@ class UsersController < ApplicationController
 	end
 
 	def create
-		@user = User.new(params[:user])
+		@user = User.new(params[:email])
 		if @user.save
 			redirect_to sign_in_path
-		else render :new
+		else 
+			render :new
 		end
 	end
 
